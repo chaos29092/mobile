@@ -1,42 +1,29 @@
 @extends('frontend.master')
 
 @section('content')
-    <div class="material-shadow full-bottom">
-        <iframe class="responsive-image maps" src="https://maps.google.com/?ie=UTF8&amp;ll=47.595131,-122.330414&amp;spn=0.006186,0.016512&amp;t=h&amp;z=17&amp;output=embed"></iframe>
-    </div>
-
-
-
     <div class="decoration hide-if-responsive"></div>
     <div class="material-container full-bottom">
         <div class="material-container no-bottom">
             <h4>Contact Information</h4>
             <p>
-                We answer all our emails in the shortest possible time!
+                We answer the request in the shortest possible time!
             </p>
             <p>
                 <strong>Postal Information</strong><br>
-                PO Box 22161 Street Collins East<br>
-                PO Box 16122 Collins Street West<br>
-                Victoria 8007 Australia
-            </p>
-            <p>
-                <strong>Envato Headquarters</strong><br>
-                121 King Street, Melbourne <br>
-                Victoria 3000 Australia
+                Zhengzhou high tech Development Zone,<br>
+                Magnolia Street No.55, China.
             </p>
             <p>
                 <strong>Contact Information:</strong><br>
-                <a href="tel: +123 456 7890" class="contact-call"><i class="fa fa-phone"></i>+ 123 456 7890</a>
-                <a href="sms: +123 456 7890" class="contact-text"><i class="fa fa-comments"></i>+ 123 456 7890</a>
-                <a href="mailto:name@domain.com" class="contact-mail"><i class="fa fa-envelope"></i>mail@doamin.com</a>
-                <a href="#" class="contact-facebook"><i class="fa fa-facebook"></i>enabled.labs</a>
-                <a href="#" class="contact-twitter"><i class="fa fa-twitter"></i>@iEnabled</a>
+                <a href="tel: +86 371 67826992" class="contact-call"><i class="fa fa-phone"></i>+86 371 67826992</a>
+                <a href="mailto:info@furnace-tech.com" class="contact-mail"><i class="fa fa-envelope"></i>info@furnace-tech.com</a>
+                <a href="https://www.facebook.com/laboratory.furnace" class="contact-facebook"><i class="fa fa-facebook"></i>laboratory.furnace</a>
+                <a href="https://twitter.com/kejiafurnace1" class="contact-twitter"><i class="fa fa-twitter"></i>@kejiafurnace1</a>
             </p>
+            <p><strong>Whatapp/Phone:</strong> +86 17737149370</p>
         </div>
     </div>
 
-    <div class="decoration"></div>
     <div class="material-container full-bottom">
         <div class="contact-form no-bottom">
             {{--<div class="formSuccessMessageWrap" id="formSuccessMessageWrap">--}}
@@ -49,18 +36,7 @@
 
             <form action="php/contact.php" method="post" class="contactForm" id="contactForm">
                 <fieldset>
-                    <div class="formValidationError bg-red-dark color-white" id="contactNameFieldError">
-                        <p class="center-text uppercase small-text">Name is required!</p>
-                    </div>
-                    <div class="formValidationError bg-red-dark color-white" id="contactEmailFieldError">
-                        <p class="center-text uppercase small-text">Mail address required!</p>
-                    </div>
-                    <div class="formValidationError bg-red-dark color-white" id="contactEmailFieldError2">
-                        <p class="center-text uppercase small-text">Mail address must be valid!</p>
-                    </div>
-                    <div class="formValidationError bg-red-dark color-white" id="contactMessageTextareaError">
-                        <p class="center-text uppercase small-text">Message field is empty!</p>
-                    </div>
+                    <h3>Contact Form</h3>
                     <div class="formFieldWrap">
                         <label class="field-title contactNameField" for="contactNameField">Name:<span>(required)</span></label>
                         <input type="text" name="contactNameField" value="" class="contactField requiredField" id="contactNameField"/>

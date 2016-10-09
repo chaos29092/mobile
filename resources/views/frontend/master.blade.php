@@ -197,33 +197,6 @@
             </div>
 
             <div class="sidebar-divider">
-                Get social with us
-            </div>
-
-            <div class="sidebar-menu half-bottom">
-                <a class="menu-item" href="https://www.facebook.com/laboratory.furnace">
-                    <i class="facebook-color fa fa-facebook"></i>
-                    <em>Facebook</em>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                <a class="menu-item" href="https://twitter.com/kejiafurnace1">
-                    <i class="twitter-color fa fa-twitter"></i>
-                    <em>Twitter</em>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                <a class="menu-item" href="https://plus.google.com/u/0/111313825639484954555">
-                    <i class="google-color fa fa-google-plus"></i>
-                    <em>Google Plus</em>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                <a class="menu-item" href="https://www.youtube.com/playlist?list=PLmqvV5aBarUxjvnVrqZ9-MO1XhNI7YILh">
-                    <i class="youtube-color fa fa-youtube-play"></i>
-                    <em>YouTube</em>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
-
-            <div class="sidebar-divider">
                 Send us a message
             </div>
 
@@ -231,7 +204,7 @@
                 <div class="sidebar-form contact-form no-bottom">
 
                     <em>
-                        Your message is important to us and we reply to all of them in less than 48 hours.
+                        Your message is important to us and we reply to all of them asap.
                     </em>
 
                     <div class="formSuccessMessageWrap" id="formSuccessMessageWrap">
@@ -278,14 +251,9 @@
             </div>
 
             <div class="sidebar-menu">
-                <a class="menu-item" href="tel:+8617737149370">
-                    <i class="bg-green-dark fa fa-phone"></i>
-                    <em>Call Us</em>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                <a class="menu-item" href="sms:+8617737149370">
-                    <i class="bg-blue-light fa fa-comment-o"></i>
-                    <em>Text Us</em>
+                <a class="menu-item" href="https://www.facebook.com/laboratory.furnace">
+                    <i class="facebook-color fa fa-facebook"></i>
+                    <em>Facebook</em>
                     <i class="fa fa-angle-right"></i>
                 </a>
                 <a class="menu-item" href="mailto:info@furnace-tech.com">
