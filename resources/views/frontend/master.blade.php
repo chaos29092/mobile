@@ -94,8 +94,12 @@
                         <i class="fa fa-angle-right"></i>
                     </a>
                     <div class="submenu submenu-active">
-                        <a class="submenu-item submenu-item-active" href="/product"> <i class="fa fa-angle-right"></i><em>Product detail</em><i class="fa fa-circle"></i></a>
-                        <a class="submenu-item" href="/category"> <i class="fa fa-angle-right"></i><em>Category</em><i class="fa fa-circle"></i></a>
+                        <a class="submenu-item" href="/product"> <i class="fa fa-angle-right"></i><em>Product detail</em><i class="fa fa-circle"></i></a>
+
+                        @foreach($categories as $category)
+                            <a class="submenu-item" href="/category/{{$category->id}}"> <i class="fa fa-angle-right"></i><em>{{$category->name}}</em><i class="fa fa-circle"></i></a>
+                        @endforeach
+
                     </div>
                 </div>
 

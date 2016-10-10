@@ -16,10 +16,7 @@ Route::get('about','HomeController@about');
 Route::get('contact','HomeController@contact');
 
 Route::get('category/{category}','HomeController@category');
-
-Route::get('product',function(){
-   return view('frontend.product');
-});
+Route::get('product/{product}','HomeController@product');
 
 
 Route::get('news',function(){

@@ -69,7 +69,7 @@
                                      </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-2 control-label" for="main_pic">产品主图（5:4左右）</label>
+                                            <label class="col-sm-2 control-label" for="main_pic">产品主图（3:2左右）</label>
                                             <div class="col-sm-10"><input name="main_pic" type="file" /></div>
                                         </div>
 

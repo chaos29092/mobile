@@ -29,6 +29,13 @@ class HomeController extends Controller
     public function category(Category $category)
     {
         $products = $category->products()->orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->get();
-        return view('frontend.category',compact('products','category'));
+        $categories = Category::orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->get();
+        return view('frontend.category',compact('products','category','categories'));
+    }
+
+    public function product(Product $product)
+    {
+        $categories = Category::orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->get();
+        return view('frontend.product',compact('product','categories'));
     }
 }
