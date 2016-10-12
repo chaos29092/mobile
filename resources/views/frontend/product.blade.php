@@ -1,4 +1,6 @@
 @extends('frontend.master')
+@section('title',$product->name)
+@section('description',$product->description)
 
 @section('content')
     <div>

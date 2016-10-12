@@ -1,4 +1,6 @@
 @extends('frontend.master')
+@section('title','Contact US')
+@section('description','Contact US')
 
 @section('content')
     <div class="container material-container">

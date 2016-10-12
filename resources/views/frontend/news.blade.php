@@ -1,44 +1,35 @@
 @extends('frontend.master')
+@section('title','News')
+@section('description','News')
 
 @section('content')
     <div class="material-container">
         <div class="heading-style-5">
-            <h4 class="heading-title">Blog</h4>
-            <i class="fa fa-pencil heading-icon"></i>
-            <div class="line bg-black"></div>
-            <p class="heading-subtitle no-bottom">
-                A blog template means this page is just a dummy, but in case you decide
-                to add posts manually or connect it to a CMS, we got you covered!
-            </p>
+            <h4 class="heading-title">News</h4>
         </div>
     </div>
-    <div class="decoration"></div>
+
 
     <div class="page-blog">
-        <!-- POST 1-->
+        @foreach($news as $new)
         <div class="page-blog-list material-container">
-            <img src="{{asset('frontend/images/pictures/3w.jpg')}}" alt="img" class="responsive-image">
-            <a href="/new"><h4 class="page-blog-title">Mobile Blog</h4></a>
-            <strong class="page-blog-tags">In: <a href="#">Web Design, Mobile Templates, Blog</a></strong>
+            <img src="{{$new->main_pic}}" alt="{{$new->name}}" class="responsive-image">
+            <a href="/new/{{$new->id}}"><h4 class="page-blog-title">{{$new->name}}</h4></a>
             <div class="page-blog-content">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec lectus vitae
-                    metus vehicula cursus. Donec purus ex, ultricies vel iaculis sed, consectetur
-                    venenatis sapien. Quisque auctor justo libero, vel aliquam odio consequat quis.
-                    Nunc accumsan efficitur felis eu egestas.
+                    {{str_limit($new->description,100)}}
                 </p>
             </div>
             <div class="page-blog-list-by">
                 <img src="https://secure.gravatar.com/avatar/b33f1b2ae5ec688eef5a8d4e45353c3b" alt="img">
-                <strong>By: <a href="#">Enabled</a></strong>
-                <em>July 15th 2024</em>
+                <strong>By: <a href="#">Kejia</a></strong>
+                <em>{{$new->updated_at}}</em>
             </div>
-            <a href="/new" class="page-blog-list-more"><i class="fa fa-arrow-right"></i></a>
+            <a href="/new/{{$new->id}}" class="page-blog-list-more"><i class="fa fa-arrow-right"></i></a>
             <a href="#" class="page-blog-list-share show-share-bottom"><i class="fa fa-retweet"></i></a>
             <div class="clear"></div>
         </div>
-        <div class="decoration"></div>
-
+        @endforeach
     </div>
 
 

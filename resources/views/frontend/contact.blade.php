@@ -1,4 +1,6 @@
 @extends('frontend.master')
+@section('title','Contact Us')
+@section('description','Contact Us')
 
 @section('content')
     <div class="decoration hide-if-responsive"></div>

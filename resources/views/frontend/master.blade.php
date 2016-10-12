@@ -28,7 +28,8 @@
     <link rel="icon" type="image/png" href="{{asset('frontend/images/splash/favicon-16x16.png')}}" sizes="16x16">
     <link rel="shortcut icon" href="{{asset('frontend/images/splash/favicon.ico')}}" type="image/x-icon"/>
 
-    <title>Epsilon 4.0</title>
+    <title>@yield('title') - kejia furnace</title>
+    <meta name="description" content="@yield('description')">
 
     <link href="{{asset('frontend/styles/style.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('frontend/styles/framework.css')}}" rel="stylesheet" type="text/css">
@@ -94,8 +95,6 @@
                         <i class="fa fa-angle-right"></i>
                     </a>
                     <div class="submenu submenu-active">
-                        <a class="submenu-item" href="/product"> <i class="fa fa-angle-right"></i><em>Product detail</em><i class="fa fa-circle"></i></a>
-
                         @foreach($categories as $category)
                             <a class="submenu-item" href="/category/{{$category->id}}"> <i class="fa fa-angle-right"></i><em>{{$category->name}}</em><i class="fa fa-circle"></i></a>
                         @endforeach

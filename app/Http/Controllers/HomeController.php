@@ -18,12 +18,14 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('frontend.about');
+        $categories = Category::orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->get();
+        return view('frontend.about',compact('categories'));
     }
 
     public function contact()
     {
-        return view('frontend.contact');
+        $categories = Category::orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->get();
+        return view('frontend.contact',compact('categories'));
     }
 
     public function category(Category $category)
@@ -37,5 +39,18 @@ class HomeController extends Controller
     {
         $categories = Category::orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->get();
         return view('frontend.product',compact('product','categories'));
+    }
+
+    public function news()
+    {
+        $categories = Category::orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->get();
+        $news = Page::where('tag','new')->orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->paginate(20);
+        return view('frontend.news',compact('categories','news'));
+    }
+
+    public function new(Page $page)
+    {
+        $categories = Category::orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->get();
+        return view('frontend.new',compact('categories','page'));
     }
 }

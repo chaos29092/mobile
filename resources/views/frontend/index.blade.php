@@ -1,4 +1,7 @@
 @extends('frontend.master')
+@section('title','High Temperature Laboratory Furnaces')
+@section('description','We supply muffle furnace, tube furnace, CVD & PECVD Systems, Vacuum Furnace & Atmosphere Furnace ,dental furnace, and Can be customized according to your needs.
+')
 
 @section('content')
     <div class="homepage-slider full-bottom">
@@ -41,25 +44,25 @@
 
     <div class="portfolio-wide container-fullscreen">
         {{--重复这一项--}}
+        @foreach($categories as $category)
         <div class="portfolio-item">
-            <a href="#" class="wide-title show-wide-text">
-                <h3>Wide Portfolios</h3>
-                <em>With captions and galleries</em>
+            <a href="/category/{{$category->id}}" class="wide-title show-wide-text">
+                <h3>{{$category->name}}</h3>
+                <em></em>
                 <div class="overlay bg-red-dark"></div>
-                <img src="{{asset('frontend/images/pictures/1w.jpg')}}" alt="img">
+                <img src="{{$category->big_pic}}" alt="{{$category->name}}">
             </a>
             <div class="wide-text">
                 <p>
-                    <img src="{{asset('frontend/images/pictures/3s.jpg')}}" alt="img">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lorem dolor,
-                    molestie placerat elit et, rutrum tincidunt ligula. Praesent imperdiet, lectus
-                    at semper bibendum, nulla turpis sollicitudin nisi, sit amet pretium justo a eros
+                    <img src="{{$category->small_pic}}" alt="{{$category->name}}">
+                    {{$category->category_des}}
                 </p>
                 <a href="#" class="portfolio-close"><i class="fa fa-times"></i>Close</a>
-                <a href="/category" class="portfolio-link"><i class="fa fa-link"></i>Category Detail</a>
+                <a href="/category/{{$category->id}}" class="portfolio-link"><i class="fa fa-link"></i>Category Detail</a>
                 <div class="clear"></div>
             </div>
         </div>
+        @endforeach
     </div>
     <div class="clear"></div>
 @endsection

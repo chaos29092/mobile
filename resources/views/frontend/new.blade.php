@@ -1,53 +1,17 @@
 @extends('frontend.master')
+@section('title',$page->title)
+@section('description',$page->description)
 
 @section('content')
     <div>
         <!-- POST 1-->
         <div class="page-blog-list material-container">
-            <img src="{{asset('frontend/images/pictures/3w.jpg')}}" alt="img" class="responsive-image">
-            <h3 class="page-blog-title">Product Detail</h3>
+            <img src="{{$page->main_pic}}" alt="{{$page->name}}" class="responsive-image">
+            <h3 class="page-blog-title">{{$page->name}}</h3>
 
             <div class="page-blog-content">
 
-                Product content <br>
-                22222 <br>
-                dsa
-
-                <br>
-                <div class="decoration"></div>
-
-                {{--Table--}}
-                <div class="container no-bottom">
-                    <h4>Table</h4>
-                    <table cellspacing='0' class="table">
-                        <tr>
-                            <th>TABLE</th>
-                            <th class="table-title">PLUS</th>
-                            <th class="table-title">PRO</th>
-                        </tr>
-                        <tr>
-                            <td class="table-sub-title"> ONE</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr class='even'>
-                            <td class="table-sub-title"> TWO</td>
-                            <td>No</td>
-                            <td>Yes</td>
-                        </tr>
-                        <tr>
-                            <td class="table-sub-title"> THREE</td>
-                            <td>No</td>
-                            <td>No</td>
-                        </tr>
-                        <tr class='even'>
-                            <td class="table-sub-title">VALUE</td>
-                            <td class="price">$9.<sup class="small-price">99</sup></td>
-                            <td class="price">$109.<sup class="small-price">99</sup></td>
-                        </tr>
-                    </table>
-                </div>
-
+                {!! $page->content !!}
 
                 <div class="blog-post-comments full-bottom">
 
@@ -67,7 +31,6 @@
                         <textarea cols="30" rows="3" placeholder="Your Message"></textarea>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="decoration hide-if-mobile"></div>

@@ -1,4 +1,6 @@
 @extends('frontend.master')
+@section('title',$category->name)
+@section('description',$category->description)
 
 @section('content')
     <div class="container material-container">

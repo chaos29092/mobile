@@ -18,14 +18,8 @@ Route::get('contact','HomeController@contact');
 Route::get('category/{category}','HomeController@category');
 Route::get('product/{product}','HomeController@product');
 
-
-Route::get('news',function(){
-    return view('frontend.news');
-});
-
-Route::get('new',function(){
-    return view('frontend.new');
-});
+Route::get('news','HomeController@news');
+Route::get('new/{page}','HomeController@new');
 
 
 Auth::routes();
